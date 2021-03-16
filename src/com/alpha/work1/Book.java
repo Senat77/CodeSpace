@@ -1,5 +1,7 @@
 package com.alpha.work1;
 
+import java.text.Format;
+
 public class Book {
 
     private int id;
@@ -15,6 +17,16 @@ public class Book {
     public Book(String name, String author) {
         this.name = name;
         this.author = author;
+    }
+
+    public Book(int id, String name, String author, String publish, int year, int countPages, float cost) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.publish = publish;
+        this.year = year;
+        this.countPages = countPages;
+        this.cost = cost;
     }
 
     public int getId() { return id;}
@@ -41,7 +53,7 @@ public class Book {
                 ", publish='" + publish + '\'' +
                 ", year=" + year +
                 ", countPages=" + countPages +
-                ", cost=" + cost +
+                ", cost=" + String.format("%.2f", cost) +
                 '}';
     }
 }
