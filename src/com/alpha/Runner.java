@@ -27,16 +27,42 @@ public class Runner {
         print(books);
 
         System.out.println("\n*** 1-4-4");
-        try {
-            System.out.println("Input percent, please : ");
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input percent, please : ");
+        if (sc.hasNextFloat()) {
             float percent = sc.nextFloat();
             raiseThePrice(books, percent);
+            print(books);
         }
-        catch(Exception e) {
+        else
             System.out.println("Invalid entered value !");
+
+        System.out.println("\n*** 1-5-1 ***");
+        String author;
+        String publish;
+        int minYear;
+
+        sc.nextLine();
+        System.out.println("Input author name, please : ");
+        author = sc.nextLine();
+        print(findByAuthor(books, author));
+
+
+        System.out.println("Input publishing house, please : ");
+        if (sc.hasNext()) {
+            publish = sc.nextLine();
+            print(findByPublish(books, publish));
         }
-        print(books);
+
+        System.out.println("Input year, please : ");
+        if (sc.hasNextInt()) {
+            minYear = sc.nextInt();
+            print(findByMinYear(books, minYear));
+        }
+        else
+            System.out.println("Invalid entered value !");
+
+        sc.close();
     }
 
     // 1-4-1
@@ -60,5 +86,18 @@ public class Runner {
     // 1-4-3
     private void raiseThePrice(Book[] books, float percent) {
         Arrays.stream(books).forEach((t) -> t.setCost(t.getCost() + t.getCost() / 100f * percent));
+    }
+
+    // 1-5-1
+    private Book[] findByAuthor (Book[] books, String author) {
+        return Arrays.stream(books).filter((t) -> t.getAuthor().equals(author)).toArray(Book[]::new);
+    }
+
+    private Book[] findByPublish(Book[] books, String publish) {
+        return Arrays.stream(books).filter((t) -> t.getPublish().equals(publish)).toArray(Book[]::new);
+    }
+
+    private Book[] findByMinYear(Book[] books, int year) {
+        return Arrays.stream(books).filter((t) -> t.getYear() >= year).toArray(Book[]::new);
     }
 }
