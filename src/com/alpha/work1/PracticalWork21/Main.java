@@ -1,4 +1,4 @@
-package com.alpha;
+package com.alpha.work1.PracticalWork21;
 
 public class Main {
 

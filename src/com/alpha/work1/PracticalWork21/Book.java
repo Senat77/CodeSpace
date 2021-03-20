@@ -1,6 +1,4 @@
-package com.alpha.work1;
-
-import java.text.Format;
+package com.alpha.work1.PracticalWork21;
 
 public class Book {
 

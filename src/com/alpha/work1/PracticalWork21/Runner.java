@@ -1,6 +1,6 @@
-package com.alpha;
+package com.alpha.work1.PracticalWork21;
 
-import com.alpha.work1.Book;
+import com.alpha.work1.PracticalWork21.Book;
 
 import java.util.Arrays;
 import java.util.Scanner;
