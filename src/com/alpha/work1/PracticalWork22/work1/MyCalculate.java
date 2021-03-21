@@ -8,8 +8,7 @@ public class MyCalculate {
 
         while (iteration != 0) {
             double d = 4d / (iteration * 2 + 1);
-            pi = (iteration % 2 == 1) ? pi + d : pi - d;
-            iteration --;
+            pi = (iteration-- % 2 == 1) ? pi + d : pi - d;
         }
 
         return 4 - pi;
