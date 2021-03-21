@@ -1,6 +1,6 @@
 package com.alpha.work1.PracticalWork22;
 
-import com.alpha.work1.PracticalWork22.work3.Runner;
+import com.alpha.work1.PracticalWork22.work4.Runner;
 
 public class Task22 {
 
