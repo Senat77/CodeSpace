@@ -1,4 +1,4 @@
-package com.alpha.work1.PracticalWork21;
+package com.alpha.PracticalWork21.work1;
 
 public class Book {
 

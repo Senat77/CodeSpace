@@ -16,10 +16,6 @@ public class ID {
         this.id = nextId++;
     }
 
-    public static int getNextId() {
-        return nextId;
-    }
-
     public int getId() {
         return id;
     }

@@ -1,13 +1,12 @@
-package com.alpha.work1.PracticalWork21;
-
-import com.alpha.work1.PracticalWork21.Book;
+package com.alpha.PracticalWork21.work1;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import com.alpha.PracticalWork21.work1.Book;
 
 public class Runner {
 
-    void run () {
+    public void run() {
         Book book = new Book();
         System.out.println(book);
         book.setId(1);
