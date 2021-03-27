@@ -1,5 +1,6 @@
 package com.alpha.PracticalWork23.work1;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Adapter extends Device {
