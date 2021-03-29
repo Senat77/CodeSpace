@@ -34,9 +34,4 @@ public abstract class Shape implements Drawable, Comparable, Cloneable {
         Shape s = (Shape) o;
         return Double.compare(calcArea(), s.calcArea());
     }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 }

@@ -26,7 +26,7 @@ public class Runner {
         Arrays.stream(shapes).sorted(new MyComparatorColor()).forEach(Shape::draw);
 
         System.out.println("\nClone :");
-        Shape newRectangle = shapes[0].clone();
+        //Shape newRectangle = shapes[0].clone();
     };
 
     private Shape[] createShapesDim() {
