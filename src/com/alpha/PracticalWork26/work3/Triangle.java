@@ -18,8 +18,12 @@ public class Triangle extends Shape {
 
     public static Triangle parseTriangle(String signature) {
         ArrayList<String> params = new ArrayList<> (Arrays.asList(signature.split("[:,]")));
-        return new Triangle(params.get(1), Double.parseDouble(params.get(2)), Double.parseDouble(params.get(3)),
-                Double.parseDouble(params.get(4)));
+        double a = Double.parseDouble(params.get(2));
+        double b = Double.parseDouble(params.get(3));
+        double c = Double.parseDouble(params.get(4));
+        if (a + b < c || a + c < b || b + c < a)
+            throw new InvalidShapeStringException("Triangle.parseTriangle : Invalid Shape String Exception");
+        return new Triangle(params.get(1), a, b, c);
     }
 
     @Override

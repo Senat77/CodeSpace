@@ -44,7 +44,6 @@ public abstract class Shape implements Drawable, Comparable, Cloneable {
     }
 
     public static Shape parseShapeV2(String signature) {
-        Shape shape = null;
         switch (signature.substring(0, signature.indexOf(":"))) {
             case ("Rectangle") -> {return Rectangle.parseRectangle(signature);}
             case ("Circle") -> {return Circle.parseCircle(signature);}

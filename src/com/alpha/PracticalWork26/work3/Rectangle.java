@@ -16,7 +16,11 @@ public class Rectangle extends Shape {
 
     public static Rectangle parseRectangle(String signature) {
         ArrayList<String> params = new ArrayList<> (Arrays.asList(signature.split("[:,]")));
-        return new Rectangle(params.get(1), Double.parseDouble(params.get(2)), Double.parseDouble(params.get(3)));
+        double a = Double.parseDouble(params.get(2));
+        double b = Double.parseDouble(params.get(3));
+        if (a <= 0 || b <= 0)
+            throw new InvalidShapeStringException("Rectangle.parseRectangle : Invalid Shape String Exception");
+        return new Rectangle(params.get(1), a, b);
     }
 
     @Override
