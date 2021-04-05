@@ -1,6 +1,6 @@
 package com.alpha.PracticalWork25;
 
-import com.alpha.PracticalWork25.work4.Runner;
+import com.alpha.PracticalWork25.work5.Runner;
 
 import java.io.IOException;
 
