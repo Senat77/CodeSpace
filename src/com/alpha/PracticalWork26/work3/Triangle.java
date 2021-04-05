@@ -21,7 +21,7 @@ public class Triangle extends Shape {
         double a = Double.parseDouble(params.get(2));
         double b = Double.parseDouble(params.get(3));
         double c = Double.parseDouble(params.get(4));
-        if (a + b < c || a + c < b || b + c < a)
+        if (a + b < c || a + c < b || b + c < a || params.size() != 5)
             throw new InvalidShapeStringException("Triangle.parseTriangle : Invalid Shape String Exception");
         return new Triangle(params.get(1), a, b, c);
     }
