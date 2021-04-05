@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Runner {
 
-    public void run() throws InvalidAgeException {
+    public void run() {
         Person person = new Person();
 
         Scanner sc = new Scanner(System.in);
@@ -12,8 +12,16 @@ public class Runner {
         person.setFirstName(sc.nextLine());
         System.out.println("Last name :");
         person.setLastName(sc.nextLine());
-        System.out.println("Age :");
-        person.setAge(sc.nextInt());
+
+        while(true) {
+            try {
+                System.out.println("Age :");
+                person.setAge(sc.nextInt());
+                break;
+            } catch (InvalidAgeException e) {
+                System.out.println(e.getMessage());
+            }
+        }
 
         System.out.println(person);
     }
