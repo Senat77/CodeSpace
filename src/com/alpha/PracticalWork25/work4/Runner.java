@@ -2,7 +2,6 @@ package com.alpha.PracticalWork25.work4;
 
 public class Runner {
 
-    @SuppressWarnings("deprecated")
     public void run() {
         int i = 127;
         Integer i1 = Integer.valueOf(i);
