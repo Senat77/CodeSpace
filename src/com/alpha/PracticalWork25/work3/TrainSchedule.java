@@ -1,5 +1,7 @@
 package com.alpha.PracticalWork25.work3;
 
+import com.alpha.PracticalWork25.work1.DaysOfWeek;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,12 @@ public class TrainSchedule {
     }
 
     public void printTrains() {
+        trains.forEach(System.out::println);
+    }
 
+    public List<Train> searchTrains(String stationArrival, DaysOfWeek day) {
+        List<Train> result = new ArrayList<>();
+        trains.forEach((t) -> {if (t.getStationArrival().equals(stationArrival) && t.getDays().contains(day)) result.add(t);});
+        return result;
     }
 }

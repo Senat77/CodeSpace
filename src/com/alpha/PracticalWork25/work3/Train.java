@@ -64,13 +64,12 @@ public class Train {
 
     @Override
     public String toString() {
-        return "Train{" +
+        return "Train:" +
                 "\tnumber=" + number +
                 ", \tstationDispatch='" + stationDispatch + '\'' +
                 ", \tstationArrival='" + stationArrival + '\'' +
                 ", \ttimeDispatch='" + timeDispatch + '\'' +
                 ", \ttimeArrival='" + timeArrival + '\'' +
-                ", \tdays=" + days.toString() +
-                '}';
+                ", \tdays=" + days.toString();
     }
 }
