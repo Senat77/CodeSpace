@@ -1,6 +1,6 @@
-package com.alpha.PracticalWork21;
+package com.alpha.practicalwork21;
 
-import com.alpha.PracticalWork21.work1.Runner;
+import com.alpha.practicalwork21.work1.Runner;
 
 public class Main {
 

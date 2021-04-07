@@ -1,8 +1,7 @@
-package com.alpha.PracticalWork21.work1;
+package com.alpha.practicalwork21.work1;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import com.alpha.PracticalWork21.work1.Book;
 
 public class Runner {
 
