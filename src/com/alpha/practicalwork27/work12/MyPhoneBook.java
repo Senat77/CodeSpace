@@ -43,7 +43,7 @@ public class MyPhoneBook {
         }
     }
 
-    class PhoneRecord implements Comparable<PhoneRecord> {
+    class PhoneRecord {
         private String record;
         private String phone;
 
@@ -73,11 +73,6 @@ public class MyPhoneBook {
             return "PhoneRecord : " +
                     "record='" + record + '\'' +
                     ", phone='" + phone + '\'';
-        }
-
-        @Override
-        public int compareTo(PhoneRecord o) {
-            return this.record.compareTo(o.record);
         }
     }
 }
