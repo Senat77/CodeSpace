@@ -1,4 +1,4 @@
-package com.alpha.practicalwork27.work1;
+package com.alpha.practicalwork27.work12;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -18,17 +18,32 @@ public class MyPhoneBook {
     }
 
     public void sortByName() {
-        Arrays.sort(records, new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                PhoneRecord pr1 = (PhoneRecord) o1;
-                PhoneRecord pr2 = (PhoneRecord) o2;
-                return compare(pr1.record , pr2.record);
-            }
-        });
+        Arrays.sort(records, new PhoneRecordByNameComparator());
     }
 
-    class PhoneRecord {
+    public void sortByPhoneNumber() {
+        Arrays.sort(records, new PhoneRecordByPhoneComparator());
+    }
+
+    public void sortByNameAndPhone() {
+        Arrays.sort(records, new PhoneRecordByNameComparator().thenComparing(new PhoneRecordByPhoneComparator()));
+    }
+
+    class PhoneRecordByNameComparator implements Comparator<PhoneRecord> {
+        @Override
+        public int compare(PhoneRecord o1, PhoneRecord o2) {
+            return (o1 != null && o2 != null) ? o1.record.compareTo(o2.record) : 0;
+        }
+    }
+
+    class PhoneRecordByPhoneComparator implements Comparator<PhoneRecord> {
+        @Override
+        public int compare(PhoneRecord o1, PhoneRecord o2) {
+            return (o1 != null && o2 != null) ? o1.phone.compareTo(o2.phone) : 0;
+        }
+    }
+
+    class PhoneRecord implements Comparable<PhoneRecord> {
         private String record;
         private String phone;
 
@@ -55,9 +70,14 @@ public class MyPhoneBook {
 
         @Override
         public String toString() {
-            return "PhoneRecord:" +
+            return "PhoneRecord : " +
                     "record='" + record + '\'' +
                     ", phone='" + phone + '\'';
+        }
+
+        @Override
+        public int compareTo(PhoneRecord o) {
+            return this.record.compareTo(o.record);
         }
     }
 }
