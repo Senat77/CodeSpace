@@ -5,19 +5,20 @@ import java.util.Comparator;
 
 public class MyPhoneBook {
 
-    private PhoneRecord[] phoneRecords = new PhoneRecord[10];
+    private PhoneRecord[] records = new PhoneRecord[8];
     private int count ;
 
     public void addPhoneNumber(String name, String phone) {
-        records[count++] = new PhoneRecord(name, phone);
+        if(count < records.length)
+            records[count++] = new PhoneRecord(name, phone);
     }
 
     public void printPhoneBook() {
-        Arrays.stream(records).forEach(System.out::println);
+        Arrays.stream(records).limit(count).forEach(System.out::println);
     }
 
     public void sortByName() {
-        Arrays.sort(phoneRecords, new Comparator() {
+        Arrays.sort(records, new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
                 PhoneRecord pr1 = (PhoneRecord) o1;
@@ -54,10 +55,9 @@ public class MyPhoneBook {
 
         @Override
         public String toString() {
-            return "PhoneRecord{" +
+            return "PhoneRecord:" +
                     "record='" + record + '\'' +
-                    ", phone='" + phone + '\'' +
-                    '}';
+                    ", phone='" + phone + '\'';
         }
     }
 }
