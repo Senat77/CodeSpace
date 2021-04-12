@@ -1,4 +1,4 @@
-package com.alpha.practicalwork28.work12;
+package com.alpha.practicalwork28.work3;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -8,18 +8,16 @@ public class Runner {
     public void run() {
 
         Integer[] intArray = createIntArray();
-
-        Double[] doubleArray = createDoubleArray();
-
-        MyTestMethod method = new MyTestMethod();
-
         print(intArray);
-        System.out.println("\ncalcNum = " + method.calcNum(intArray, 50));
-        System.out.println("calcSum = " + method.calcSum(intArray, 50));
+        MyMixer<Integer> intMixer = new MyMixer<>(intArray);
+        intMixer.shuffle();
+        print(intMixer.getArray());
 
-        print(doubleArray);
-        System.out.println("\ncalcNum = " + method.calcNum(doubleArray, 50.0));
-        System.out.printf("calcSum = %.2f", method.calcSum(doubleArray, 50.0));
+        String[] stringArray = createStringArray();
+        print(stringArray);
+        MyMixer<String> stringMixer = new MyMixer<>(stringArray);
+        stringMixer.shuffle();
+        print(stringMixer.getArray());
     }
 
     private <T> void print (T[] tArray) {
@@ -36,11 +34,11 @@ public class Runner {
         return intArray;
     }
 
-    private Double[] createDoubleArray() {
+    private String[] createStringArray() {
         Random rand = new Random();
-        Double[] doubleArray = new Double[rand.nextInt(10)];
-        for(int i = 0; i < doubleArray.length; i++)
-            doubleArray[i] = rand.nextDouble() * 100;
-        return doubleArray;
+        String[] stringArray = new String[rand.nextInt(5)];
+        for(int i = 0; i < stringArray.length; i++)
+            stringArray[i] = String.valueOf(rand.nextLong());
+        return stringArray;
     }
 }
