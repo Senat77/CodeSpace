@@ -8,6 +8,9 @@ public class MyPhoneBook {
     private PhoneRecord[] records = new PhoneRecord[8];
     private int count ;
 
+    private final PhoneRecordByNameComparator byNameComparator = new PhoneRecordByNameComparator();
+    private final PhoneRecordByPhoneComparator byPhoneComparator = new PhoneRecordByPhoneComparator();
+
     public void addPhoneNumber(String name, String phone) {
         if(count < records.length)
             records[count++] = new PhoneRecord(name, phone);
@@ -18,15 +21,15 @@ public class MyPhoneBook {
     }
 
     public void sortByName() {
-        Arrays.sort(records, new PhoneRecordByNameComparator());
+        Arrays.sort(records, byNameComparator);
     }
 
     public void sortByPhoneNumber() {
-        Arrays.sort(records, new PhoneRecordByPhoneComparator());
+        Arrays.sort(records, byPhoneComparator);
     }
 
     public void sortByNameAndPhone() {
-        Arrays.sort(records, new PhoneRecordByNameComparator().thenComparing(new PhoneRecordByPhoneComparator()));
+        Arrays.sort(records, byNameComparator.thenComparing(byPhoneComparator));
     }
 
     class PhoneRecordByNameComparator implements Comparator<PhoneRecord> {
