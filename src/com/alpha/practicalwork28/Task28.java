@@ -1,6 +1,6 @@
 package com.alpha.practicalwork28;
 
-import com.alpha.practicalwork28.work12.Runner;
+import com.alpha.practicalwork28.work3.Runner;
 
 public class Task28 {
 

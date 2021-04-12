@@ -1,7 +1,6 @@
 package com.alpha.practicalwork27.work3;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class MyPhone {
 
@@ -104,22 +103,6 @@ public class MyPhone {
 
             public PhoneRecord(String record, String phone) {
                 this.record = record;
-                this.phone = phone;
-            }
-
-            public String getRecord() {
-                return record;
-            }
-
-            public void setRecord(String record) {
-                this.record = record;
-            }
-
-            public String getPhone() {
-                return phone;
-            }
-
-            public void setPhone(String phone) {
                 this.phone = phone;
             }
 

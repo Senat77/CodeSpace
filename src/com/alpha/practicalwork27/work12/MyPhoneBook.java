@@ -55,22 +55,6 @@ public class MyPhoneBook {
             this.phone = phone;
         }
 
-        public String getRecord() {
-            return record;
-        }
-
-        public void setRecord(String record) {
-            this.record = record;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-
-        public void setPhone(String phone) {
-            this.phone = phone;
-        }
-
         @Override
         public String toString() {
             return "PhoneRecord : " +
