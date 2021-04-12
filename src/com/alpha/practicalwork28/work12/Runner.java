@@ -20,9 +20,11 @@ public class Runner {
 
         print(intArray);
         System.out.println("\ncalcNum = " + method.calcNum(intArray, 50));
+        System.out.println("calcSum = " + method.calcSum(intArray, 50));
 
         print(doubleArray);
         System.out.println("\ncalcNum = " + method.calcNum(doubleArray, 50.0));
+        System.out.printf("calcSum = %.2f", method.calcSum(doubleArray, 50.0));
     }
 
     private void print(Integer[] intArray) {
@@ -32,6 +34,6 @@ public class Runner {
 
     private void print(Double[] doubleArray) {
         System.out.println("\nDouble array:");
-        Arrays.stream(doubleArray).forEach(t -> System.out.printf("%.2f ", t));
+        Arrays.stream(doubleArray).forEach(t -> System.out.printf("%.2f   ", t));
     }
 }

@@ -10,4 +10,13 @@ public class MyTestMethod {
         }
         return count;
     }
+
+    public<T extends Number & Comparable> double calcSum(T[] array, T maxValue) {
+        double res = 0.0;
+        for (T t : array) {
+            if(t.compareTo(maxValue) > 0)
+                res += t.doubleValue();
+        }
+        return res;
+    }
 }
