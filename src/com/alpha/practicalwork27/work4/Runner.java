@@ -4,5 +4,6 @@ public class Runner {
 
     public void run() {
         new MyTestClass().test();
+        new MyTestClass.MyStaticNested().test();
     }
 }
