@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MyTranslator {
 
-    private Map<String, String> dict;
+    private final Map<String, String> dict;
 
     public MyTranslator() {
         dict = new HashMap<>();
@@ -19,7 +19,7 @@ public class MyTranslator {
     }
 
     public String translate(String phrase) {
-        List<String> list = new ArrayList<String>(Arrays.asList(phrase.trim().toLowerCase().split(" ")));
+        List<String> list = new ArrayList<>(Arrays.asList(phrase.trim().toLowerCase().split(" ")));
         StringBuilder result = new StringBuilder();
         for(String word : list) {
             if (dict.containsKey(word))

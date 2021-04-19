@@ -4,8 +4,8 @@ import java.util.*;
 
 public class MyNumGenerator {
 
-    private int numOfElm;
-    private int maxNumb;
+    private final int numOfElm;
+    private final int maxNumb;
 
     public MyNumGenerator(int numOfElm, int maxNumb) {
         this.numOfElm = numOfElm;
