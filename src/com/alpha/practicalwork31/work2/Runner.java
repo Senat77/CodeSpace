@@ -14,8 +14,7 @@ public class Runner {
             return;
         }
 
-        try {
-            FileInputStream fis = new FileInputStream(fileName);
+        try (FileInputStream fis = new FileInputStream(fileName)) {
             byte[] buffer = new byte[fis.available()];
             fis.read(buffer);
             System.out.println(new String(buffer));
