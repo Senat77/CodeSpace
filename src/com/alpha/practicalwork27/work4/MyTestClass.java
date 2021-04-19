@@ -11,7 +11,7 @@ public class MyTestClass {
         System.out.println("MyTestClass : MyLocal.value not available");
 
         new MyStaticNested().test();
-        new MyInner()
+        //new MyInner()
     }
 
     static class MyStaticNested {
