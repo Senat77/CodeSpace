@@ -1,4 +1,4 @@
-package com.alpha.work1.PracticalWork22.work2;
+package com.alpha.practicalwork22.work2;
 
 public class Employee {
 

@@ -1,6 +1,6 @@
-package com.alpha.work1.PracticalWork22.work2;
+package com.alpha.practicalwork22.work2;
 
-import com.alpha.work1.PracticalWork22.work1.MyCalculate;
+import com.alpha.practicalwork22.work1.MyCalculate;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.alpha.work1.PracticalWork22.work3;
+package com.alpha.practicalwork22.work3;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.alpha.work1.PracticalWork22.work1;
+package com.alpha.practicalwork22.work1;
 
 public class MyCalculate {
 

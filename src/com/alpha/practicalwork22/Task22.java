@@ -1,4 +1,4 @@
-package com.alpha.work1.PracticalWork22;
+package com.alpha.work1.practicalwork22;
 
 import com.alpha.work1.PracticalWork22.work4.Runner;
 
