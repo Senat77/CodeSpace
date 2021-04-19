@@ -17,10 +17,10 @@ public class Runner {
         System.out.println(listLink);
 
         ListIterator<String> listArrayIterator = listArray.listIterator(listArray.size());
-        int i = 1;
+        ListIterator<String> listLinkIterator = listLink.listIterator();
         do {
-            listLink.add(i, listArrayIterator.previous());
-            i += 2;
+            listLinkIterator.next();
+            listLinkIterator.add(listArrayIterator.previous());
         }
         while (listArrayIterator.hasPrevious());
         System.out.println(listLink);
