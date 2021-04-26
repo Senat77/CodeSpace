@@ -1,8 +1,6 @@
 package com.alpha.practicalwork31.work4;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 public class AccountingUser {
 
