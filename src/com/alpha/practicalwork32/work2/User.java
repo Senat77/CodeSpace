@@ -39,12 +39,4 @@ public class User {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }
