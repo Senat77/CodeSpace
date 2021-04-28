@@ -1,6 +1,6 @@
 package com.alpha.practicalwork32.work2;
 
-import com.alpha.practicalwork32.work3.User;
+import com.alpha.practicalwork32.work2.User;
 
 import java.io.*;
 import java.util.Scanner;
@@ -17,7 +17,7 @@ public class Runner {
             raf.write(user.getAge());
 
             user = null;
-            com.alpha.practicalwork32.work2.User newUser = new com.alpha.practicalwork32.work2.User();
+            User newUser = new User();
 
             raf.seek(0L);
             newUser.setFirstName(raf.readLine());

@@ -6,7 +6,7 @@ public class Employee implements Serializable {
 
     private String name;
     private String address;
-    transient private int SSN;
+    static private int SSN;
     private int number;
 
     public void setName(String name) {
@@ -17,8 +17,8 @@ public class Employee implements Serializable {
         this.address = address;
     }
 
-    public void setSSN(int SSN) {
-        this.SSN = SSN;
+    public static void setSSN(int ssn) {
+        SSN = ssn;
     }
 
     public void setNumber(int number) {

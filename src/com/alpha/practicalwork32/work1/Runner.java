@@ -8,7 +8,7 @@ public class Runner {
         Employee employee = new Employee();
         employee.setName("Ivan");
         employee.setAddress("Address");
-        employee.setSSN(123456);
+        Employee.setSSN(123456);
         employee.setNumber(654321);
         System.out.println(employee);
 
@@ -17,6 +17,7 @@ public class Runner {
         }
 
         employee = null;
+        Employee.setSSN(123123);
         Employee newEmployee;
 
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("ext_data.tmp"))) {
