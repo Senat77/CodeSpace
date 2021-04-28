@@ -1,9 +1,7 @@
 package com.alpha.practicalwork33.work1;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class Runner {
 
@@ -14,6 +12,13 @@ public class Runner {
         //Arrays.sort(arrInt, (a, b) -> b.compareTo(a));
         Arrays.sort(arrInt, Comparator.reverseOrder());
         System.out.println(Arrays.toString(arrInt));
+
+        List<String> strList = createStringList();
+        System.out.println(strList);
+        Collections.sort(strList);
+        System.out.println(strList);
+        strList.sort((s1, s2) -> s2.compareTo(s1));
+        System.out.println(strList);
     }
 
     private Integer[] createArrayInt() {
@@ -26,9 +31,10 @@ public class Runner {
 
     private List<String> createStringList() {
         Random random = new Random();
-        List<String> = new ArraysL
+        List<String> strList = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
-
+            strList.add(String.valueOf(Character.valueOf((char) (random.nextInt(26) + 65))));
         }
+        return strList;
     }
 }
