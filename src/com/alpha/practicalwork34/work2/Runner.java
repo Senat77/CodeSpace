@@ -2,6 +2,8 @@ package com.alpha.practicalwork34.work2;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
 
 public class Runner {
 
